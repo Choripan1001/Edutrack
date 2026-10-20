@@ -1,75 +1,38 @@
-<p align="center">
-  <img src="assets/logo.png" alt="EduTrack - Gestión académica inteligente" width="380">
-</p>
+# EduTrack
 
-<p align="center">
-  <b>Plataforma de gestión académica en español para administradores, docentes, estudiantes y acudientes.</b>
-</p>
+Plataforma de gestión académica en español: roles (admin, docente, estudiante, acudiente), calificaciones, asistencia, horarios y una suite de productividad (tareas, calendario, hábitos, metas y Pomodoro).
 
-<p align="center">
-  <img src="https://img.shields.io/badge/PHP-0B1F4B?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
-  <img src="https://img.shields.io/badge/MySQL-0B1F4B?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
-  <img src="https://img.shields.io/badge/HTML5-0B1F4B?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
-  <img src="https://img.shields.io/badge/CSS3-0B1F4B?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
-  <img src="https://img.shields.io/badge/XAMPP-0B1F4B?style=for-the-badge&logo=xampp&logoColor=white" alt="XAMPP">
-  <img src="https://img.shields.io/badge/Estado-En%20desarrollo-0B1F4B?style=for-the-badge" alt="Estado: en desarrollo">
-</p>
+**Stack:** PHP · MySQL · HTML · CSS · XAMPP
 
-<p align="center">
-  <a href="https://www.tiktok.com/@edutrack">
-    <img src="https://img.shields.io/badge/TikTok-%40edutrack-0B1F4B?style=for-the-badge&logo=tiktok&logoColor=white" alt="TikTok @edutrack">
-  </a>
-  <a href="https://www.instagram.com/edutrack">
-    <img src="https://img.shields.io/badge/Instagram-%40edutrack-0B1F4B?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram @edutrack">
-  </a>
-</p>
+## Estructura
 
----
+```
+edutrack/
+├── app/                  # edutrack_v2.php, styles.css, api/*.php
+├── config/
+│   └── config.example.php   # Copiar a config.php (no se sube a GitHub)
+├── database/
+│   ├── schema.sql        # Tablas
+│   └── seed.sql          # Roles, materias y usuario admin demo
+├── docs/
+│   └── INSTALACION_XAMPP.md
+├── subir_a_github.bat    # Script para subir el proyecto (Windows)
+├── .gitignore
+└── LICENSE
+```
 
-> Este repositorio contiene la documentación del proyecto. El código de la aplicación no se publica aquí.
+## Instalación rápida (XAMPP)
 
-## Características
+1. Copia esta carpeta a `C:\xampp\htdocs\edutrack`.
+2. Inicia **Apache** y **MySQL** en el panel de XAMPP.
+3. En `http://localhost/phpmyadmin` → pestaña **Importar** → sube `database/schema.sql` y luego `database/seed.sql`.
+4. Copia `config/config.example.php` como `config/config.php`.
+5. Abre `http://localhost/edutrack/app/`.
 
-**Gestión académica**
-- Calificaciones
-- Asistencia
-- Horarios
+**Usuario demo:** `admin@edutrack.local` / `Admin123!` (cámbiala al entrar).
 
-**Suite de productividad**
-- Gestor de tareas
-- Calendario
-- Seguimiento de hábitos
-- Metas
-- Temporizador Pomodoro
-- Perfiles de usuario
-
-**Seguridad y roles**
-- Autenticación con sesiones seguras
-- Control de acceso basado en roles (RBAC) con cuatro paneles: administrador, docente, estudiante y acudiente
-- Gestión de usuarios (CRUD)
-
-## Tecnologías
-
-| Capa | Tecnología |
-|------|-----------|
-| Backend | PHP |
-| Base de datos | MySQL |
-| Frontend | HTML y CSS |
-| Entorno local | XAMPP |
-
-## Documentación
-
-- [Arquitectura](docs/ARQUITECTURA.md)
-- [Roles y permisos](docs/ROLES.md)
-- [Hoja de ruta](docs/ROADMAP.md)
-
-## Síguenos
-
-- TikTok: [@edutrack](https://www.tiktok.com/@edutrack)
-- Instagram: [@edutrack](https://www.instagram.com/edutrack)
+Más detalle en [docs/INSTALACION_XAMPP.md](docs/INSTALACION_XAMPP.md).
 
 ## Licencia
 
-Consulta el archivo [LICENSE](LICENSE).
-
-<p align="center"><i>Conectando el aprendizaje con el futuro.</i></p>
+MIT — ver [LICENSE](LICENSE).

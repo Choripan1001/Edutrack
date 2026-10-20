@@ -1,39 +1,16 @@
-# Credenciales y configuración privada
+# Configuración local con credenciales (NUNCA subir)
+config/config.php
 .env
-.env.*
-config.php
-config/*.local.php
-*.key
-*.pem
 
-# Bases de datos y volcados
-*.sql
-*.sqlite
-*.db
-*.dump
-
-# Archivos subidos por usuarios
+# Subidas de usuarios y logs
 uploads/
-storage/
 logs/
 *.log
 
-# Dependencias
-vendor/
-node_modules/
-
-# Sistema y editores
+# Sistema / editores
 .DS_Store
 Thumbs.db
-desktop.ini
 .vscode/
 .idea/
-
-# Archivos comprimidos y temporales
-*.zip
-*.rar
 *.bak
 *.tmp
-
-# Documentos internos de trabajo
-RESUMEN_PROYECTO_*.md
